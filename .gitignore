@@ -2,3 +2,9 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+css/stylesheet.css.map
+
+.idea
+
+.DS_store
