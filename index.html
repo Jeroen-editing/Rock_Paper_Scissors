@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper & Scissors</title>
+
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Josefin+Sans:300,400,600,700|
+    |K2D:300,400,500,600,700,800|Rubik:300,400,500,700,900|Sniglet:400,800|
+    |Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="asideLeft">
+            <div class="photoBoardLeft">
+                <div class="topLeftBox">
+                    <p class="leftPlay"></p>
+                </div>
+                <div class="midLeftBox">
+                    <div class="imgBox">
+                        <h4 class="selectorsTitle">︎Choose ⬇︎</h4>
+                        <button class="selector" value="0">
+                            <img src="assets/img/rock-01.jpg" alt="rock">
+                        </button>
+                        <button class="selector" value="1">
+                            <img src="assets/img/paper-01.jpg" alt="paper">
+                        </button>
+                        <button class="selector" value="2">
+                            <img src="assets/img/scissors-01.jpg" alt="scissors">
+                        </button>
+                    </div>
+                    <div class="bottomLeftBox">
+                        <p class="developer">J.<span class="games">games</span></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <section class="top">
+                <header class="container header">
+                    <div class="headerTitleBox">
+                        <h1 class="topTitle">
+                            <span>Rock</span>-<span>Paper</span>-<span>Scissors</span>
+                        </h1>
+                        <div class="lineUnder"></div>
+                    </div>
+                </header>
+                <section class="topSection">
+                    <div class="topSectionBox">
+                        <div class="scoreBox">
+                            <div class="scoreTopBox">
+                                <div class="playerNameBox">
+                                    <p class="playerName" id="playerName">
+                                        <label for="playerInput" class="nameLabel"></label>
+                                        <input class="inputName" type="text" name="name" id="playerInput" maxlength="16" placeholder="Enter your nickname">
+                                    </p>
+                                </div>
+                                <div class="pcNameBox">
+                                    <p class="pcName">Your Pc</p>
+                                </div>
+                            </div>
+                            <div class="scoreBottomBox">
+                                <div class="scorePlayerBox">
+                                <p class="scorePlayer" id="playerScore">0</p>
+                                </div>
+                                <div class="scoreTextBoard">
+                                    <div class="scoreText">
+                                        <div class="scoreTitleBoard">
+                                            <img class="arrowLeft" src="assets/icon/arrow-L-green-b.png" alt="">
+                                            <div class="verticalLine"></div>
+                                            <div class="scoreTitle">
+                                                <h3>Score</h3>
+                                                <div class="lineUnderScoreTitle"></div>
+                                            </div>
+                                            <div class="verticalLine"></div>
+                                            <img class="arrowRight" src="assets/icon/arrow-R-green-b.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scorePcBox">
+                                    <p class="scorePC" id="pcScore">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scoreInfo">
+                            <p class="scoreMessages" id="scoreInfo"></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="middle">
+            </section>
+
+            <section class="bottom">
+                <section class="bottomSection">
+                    <div class="bottomSectionBox">
+                        <div class="gameInfo">
+                            <p class="gameMessages" id="gameInfo"></p>
+                        </div>
+                        <div class="controlBox">
+                            <button type="button" class="gameButtons" name="start" id="startButton">Play Now</button>
+                            <button type="button" class="gameButtons" name="restart" id="restartButton">New Game</button>
+                        </div>
+                    </div>
+                </section>
+                <footer class="footer">
+                    <div class="container footerTitleBox">
+                        <h2 class="bottomTitle">
+                                <span>Rock-</span><span>Paper-</span><span>Scissors</span>
+                        </h2>
+                        <div class="lineUnder"></div>
+                    </div>
+                </footer>
+            </section>
+            <p class="timeAndDev"" id="rights"></p>
+        </main>
+
+        <aside class="asideRight">
+            <div class="photoBoardRight">
+                <div class="topRightBox">
+                    <p class="rightPlay"></p>
+                </div>
+                <div class="midRightBox">
+                    <div class="imgBox">
+                        <h4 class="selectorsTitle">︎⬇ Choose︎</h4>
+                        <button class="selector" value="0">
+                            <img src="assets/img/rock-02.jpg" alt="rock">
+                        </button>
+                        <button class="selector" value="1">
+                            <img src="assets/img/paper-02.jpg" alt="paper">
+                        </button>
+                        <button class="selector" value="2">
+                            <img src="assets/img/scissors-02.jpg" alt="scissors">
+                        </button>
+                    </div>
+                    <div class="bottomRightBox">
+                        <p class="developer">J<span class="games">.games</span></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <script src="game.js"></script>
+    </div>  
+</body>
+</html>

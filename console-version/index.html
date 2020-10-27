@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+    <h1>Rock, Paper or Scissors</h1>
+    <h4>Open the console (inspector)</h4>
+
+    <p>
+        1 game is 5 rounds.
+        <br>
+        Push 'Play' to start the game.
+    </p>
+
+    <button onclick="game()">Play!</button>
+
+    <script>
+        // statements and functions in 1 big function
+        function game() {
+
+            let playerPoints = 0;
+            let pcPoints = 0;
+
+            // see if player or pc has less then 5 points
+            while (pcPoints < 5 && playerPoints < 5) {
+
+                // variables shouldn't be global if not needed, still need to fix that
+                let choices = ['Rock', 'Paper', 'Scissors'];
+                let makeChoice = '';
+                let selection = '';
+                let playerSelection;
+                let computerSelection;
+
+                // PC random choice
+                function computersPlay() {
+
+                    function getRandomInt(max) {
+                        return Math.floor(Math.random() * Math.floor(max));
+                    }
+                    return choices[getRandomInt(3)];
+                }
+
+                // players choice (input with prompt()) & and adding different spelling styles
+                function playersPlay() {
+
+                    makeChoice = prompt('Make your choice: Rock, Paper, Scissors');
+
+                    if (makeChoice == 'Rock' || makeChoice == 'ROCK' || makeChoice == 'rock') {
+                        selection = 'Rock';
+                    } else if (makeChoice == 'Paper' || makeChoice == 'PAPER' || makeChoice == 'paper') {
+                        selection = 'Paper';
+                    } else if (makeChoice == 'Scissors' || makeChoice == 'SCISSORS' || makeChoice == 'scissors') {
+                        selection = 'Scissors';
+                    }
+                    return selection;
+                }
+
+                // play the first round (and repeating it)
+                function playRound() {
+
+                    computerSelection = computersPlay();
+                    playerSelection = playersPlay();
+
+                    console.log("PC's choice: " + computerSelection);
+                    console.log("Your choice: " + playerSelection);
+
+                    if (computerSelection === playerSelection) {
+                        console.log("No win: " + computerSelection + " = " + playerSelection);
+                    } else if (computerSelection === 'Rock' && playerSelection === 'Paper') {
+                        playerPoints += 1;
+                        console.log("You Win! Paper beats Rock");
+                    } else if (computerSelection === 'Rock' && playerSelection === 'Scissors') {
+                        pcPoints += 1;
+                        console.log("You Lose! Rock beats Scissors");
+                    } else if (computerSelection === 'Paper' && playerSelection === 'Rock') {
+                        pcPoints += 1;
+                        console.log("You Lose! Paper beats Rock");
+                    } else if (computerSelection === 'Paper' && playerSelection === 'Scissors') {
+                        playerPoints += 1;
+                        console.log("You Win! Scissors beats Paper")
+                    } else if (computerSelection === 'Scissors' && playerSelection === 'Paper') {
+                        pcPoints += 1;
+                        console.log("You Lose! Scissors beats Paper")
+                    } else if (computerSelection === 'Scissors' && playerSelection === 'Rock') {
+                        playerPoints += 1;
+                        console.log("You Win! Rock beats Scissors");
+                    }
+                    return playerPoints + pcPoints;
+                }
+
+                // showing score and separating different rounds
+                playRound();
+                console.log('Score: ' + playerPoints + ' - ' + pcPoints);
+                console.log('- - - - - - - - - - - - - - -')
+            }
+
+            // check the winner
+            if (pcPoints > playerPoints) {
+                console.log('%c The PC wins the game!', 'font-size: 18px; color: red; border; darkslategray');
+                console.log("Push 'Play, to play again.");
+            } else {
+                console.log('%c You win the game!', 'font-size: 18px; color: green; darkslategray');
+                console.log("Push 'Play, to play again.");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
