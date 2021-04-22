@@ -83,27 +83,19 @@ function startGame() {
     function backgrounds() {
         const leftPlay = document.querySelector('.leftPlay');
         const rightPlay = document.querySelector('.rightPlay');
-        //const leftDeveloper = document.querySelector('.leftDeveloper');
-        //const rightDeveloper = document.querySelector('.rightDeveloper');
 
         if (playerNumber === 0) {
-            leftPlay.style.backgroundImage =  'url("../img/rock-S-01.jpg")';}
-            //leftDeveloper.style.backgroundImage = 'url("../img/rock-S-01.jpg")'; }
+            leftPlay.style.backgroundImage = 'url("./assets/img/rock-S-01.jpg")';}
         else if (playerNumber === 1) {
-            leftPlay.style.backgroundImage = 'url("../img/paper-S-01.jpg")';}
-            //leftDeveloper.style.backgroundImage =  'url("../img/paper-S-01.jpg")';}
+            leftPlay.style.backgroundImage = 'url("./assets/img/paper-S-01.jpg")';}
         else {
-            leftPlay.style.backgroundImage =  'url("../img/scissors-S-2-01.jpg")';}
-            //leftDeveloper.style.backgroundImage = 'url("../img/scissors-S-01.jpg")'; }
+            leftPlay.style.backgroundImage =  'url("./assets/img/scissors-S-2-01.jpg")';}
         if (pcNumber === 0) {
-            rightPlay.style.backgroundImage = 'url("../img/rock-S-02.jpg")';}
-            //rightDeveloper.style.backgroundImage = 'url("../img/rock-S-01.jpg")'; }
+            rightPlay.style.backgroundImage = 'url("./assets/img/rock-S-02.jpg")';}
         else if (pcNumber === 1) {
-            rightPlay.style.backgroundImage = 'url("../img/paper-S-02.jpg")';}
-            //rightDeveloper.style.backgroundImage = 'url("../img/paper-S-01.jpg")'; }
+            rightPlay.style.backgroundImage = 'url("./assets/img/paper-S-02.jpg")';}
         else {
-            rightPlay.style.backgroundImage = 'url("../img/scissors-S-2-02.jpg")';}
-            //rightDeveloper.style.backgroundImage = 'url("../img/scissors-S-02.jpg")'; }
+            rightPlay.style.backgroundImage = 'url("./assets/img/scissors-S-2-02.jpg")';}
     }
 
     function points() {
