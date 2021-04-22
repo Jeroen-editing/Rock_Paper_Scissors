@@ -1,4 +1,4 @@
-# Rock - Papaer - Scissors
+# Rock - Paper - Scissors
 
 Excercise for "the Odin Project".
 
