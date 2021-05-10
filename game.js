@@ -10,6 +10,20 @@ const selectors = document.querySelectorAll('.selector');
 gameTextOne.textContent = "Enter your nickname in the field (optional)...";
 gameTextTwo.textContent = "...and press 'Play Now' to begin the game.";
 
+const windowSize = () => {
+    var win = window;
+    var doc = document;
+    var docElem = doc.documentElement;
+    var body = doc.getElementById('body');
+    var x = win.innerWidth || docElem.clientWidth || doc.body.clientWidth;
+    var y = win.innerHeight|| docElem.clientHeight|| doc.body.clientHeight;
+
+    console.log(x + " , " + y);
+    body.style.width = `${x}px`;
+    body.style.height = `${y}px`;
+}
+
+window.onload = (windowSize());
 
 document.getElementById('startButton').addEventListener('click', startGame);
 //document.getElementById('restartButton').addEventListener('click', newGame);
@@ -132,7 +146,7 @@ function startGame() {
         let showWinner = () => setTimeout(winner, 1500);
         showWinner();
         function winner() {
-            gameTextTwo.textContent = "Press 'New Game' to begin the game.";
+            gameTextTwo.textContent = "Press 'New Game' to restart the game.";
             gameTextTwo.style.marginTop = "0";
             if (pcPoints > playerPoints) {
                 gameTextOne.innerHTML = "<span>Too bad</span>, Your Pc won this game.";

@@ -9,7 +9,7 @@
     |K2D:300,400,500,600,700,800|Rubik:300,400,500,700,900|Sniglet:400,800|
     |Varela+Round&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <div class="container">
         <aside class="asideLeft">
             <div class="photoBoardLeft">
@@ -36,84 +36,61 @@
             </div>
         </aside>
 
-        <main class="main">
-            <section class="top">
-                <header class="container header">
-                    <div class="headerTitleBox">
-                        <h1 class="topTitle">
-                            <span>Rock</span>-<span>Paper</span>-<span>Scissors</span>
-                        </h1>
-                        <div class="lineUnder"></div>
-                    </div>
-                </header>
-                <section class="topSection">
-                    <div class="topSectionBox">
-                        <div class="scoreBox">
-                            <div class="scoreTopBox">
-                                <div class="playerNameBox">
-                                    <p class="playerName" id="playerName">
-                                        <label for="playerInput" class="nameLabel"></label>
-                                        <input class="inputName" type="text" name="name" id="playerInput" maxlength="16" placeholder="Enter your nickname">
-                                    </p>
-                                </div>
-                                <div class="pcNameBox">
-                                    <p class="pcName">Your Pc</p>
-                                </div>
-                            </div>
-                            <div class="scoreBottomBox">
-                                <div class="scorePlayerBox">
-                                <p class="scorePlayer" id="playerScore">0</p>
-                                </div>
-                                <div class="scoreTextBoard">
-                                    <div class="scoreText">
-                                        <div class="scoreTitleBoard">
-                                            <img class="arrowLeft" src="assets/icon/arrow-L-green-b.png" alt="">
-                                            <div class="verticalLine"></div>
-                                            <div class="scoreTitle">
-                                                <h3>Score</h3>
-                                                <div class="lineUnderScoreTitle"></div>
-                                            </div>
-                                            <div class="verticalLine"></div>
-                                            <img class="arrowRight" src="assets/icon/arrow-R-green-b.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="scorePcBox">
-                                    <p class="scorePC" id="pcScore">0</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="scoreInfo">
-                            <p class="scoreMessages" id="scoreInfo"></p>
-                        </div>
-                    </div>
-                </section>
+        <main class="midsection">
+            <header class="header">
+                <h1 class="topTitle">
+                    <span>Rock</span>-<span>Paper</span>-<span>Scissors</span>
+                </h1>
+                <div class="lineUnder"></div>
+            </header>
+
+            <section class="nameBox">
+                <div class="playerName" id="playerName">
+                    <input class="inputName" type="text" name="name" id="playerInput" maxlength="16" placeholder="Enter your nickname ...">
+                </div>
+                <div class="pcName">
+                    <p class="pc">Your Computer</p>
+                </div>
             </section>
 
-            <section class="middle">
+            <section class="scoreBox">
+                <div class="scorePlayerBox">
+                    <p class="scorePlayer" id="playerScore">0</p>
+                </div>
+                <div class="scoreTextBox">    
+                    <img class="arrowLeft" src="assets/icon/arrow-L-green-b.png" alt="">
+                    <div class="verticalLine"></div>
+                    <h3 class="scoreTitle">
+                        Score
+                    </h3>
+                    <div class="verticalLine"></div>
+                        <img class="arrowRight" src="assets/icon/arrow-R-green-b.png" alt="">                        
+                    </div>
+                    <div class="scorePcBox">
+                        <p class="scorePC" id="pcScore">0</p>
+                    </div>
             </section>
 
-            <section class="bottom">
-                <section class="bottomSection">
-                    <div class="bottomSectionBox">
-                        <div class="gameInfo">
-                            <p class="gameMessages" id="gameInfo"></p>
-                        </div>
-                        <div class="controlBox">
-                            <button type="button" class="gameButtons" name="start" id="startButton">Play Now</button>
-                            <button type="button" class="gameButtons" name="restart" id="restartButton">New Game</button>
-                        </div>
-                    </div>
-                </section>
-                <footer class="footer">
-                    <div class="container footerTitleBox">
-                        <h2 class="bottomTitle">
-                                <span>Rock-</span><span>Paper-</span><span>Scissors</span>
-                        </h2>
-                        <div class="lineUnder"></div>
-                    </div>
-                </footer>
+            <section class="scoreInfo">
+                <p class="scoreMessages" id="scoreInfo"></p>
             </section>
+
+            <section class="gameInfo">
+                <p class="gameMessages" id="gameInfo"></p>
+            </section>
+
+            <section class="controlBox">
+                <button type="button" class="gameButtons" name="start" id="startButton">Play Now</button>
+                <button type="button" class="gameButtons" name="restart" id="restartButton">New Game</button>
+            </section>
+
+            <footer class="footer">
+                <h2 class="bottomTitle">
+                    <span>Rock-</span><span>Paper-</span><span>Scissors</span>
+                </h2>
+                <div class="lineUnder"></div>
+            </footer>
+
             <p class="timeAndDev"" id="rights"></p>
         </main>
 
