@@ -1,13 +1,13 @@
 $bgGreen: rgba(0, 70, 73, 0.88);
 $bgLight: rgba(0, 117, 121, 0.88);
-$bgBlue: rgba(0, 34, 56, 0.48);
+$bgBlue: rgba(0, 34, 56, 0.4);
 $titleBg: rgba(7, 51, 39, 0.6);
 
 $mainBorder: rgb(37, 86, 116);
 $lightBorder: rgba(9, 165, 152, 0.6);
 $orangeBorder: rgba(211, 164, 34, 0.8);
 $darkBorder: rgba(7, 51, 39, 0.6);
-$greenBorder: rgba(94, 124, 50, 0.6);
+$greenBorder: rgba(94, 124, 50, 0.46);
 
 $textColor: rgb(236, 209, 57);
 
@@ -66,27 +66,27 @@ body {
     width: 155px;
     height: 101px;
     margin: 4px auto;
-    background: $bgGreen;
+    background: $bgBlue;
     border: 2px solid $greenBorder;
     border-radius: 10px;
-    //box-shadow: 0 0 3px 2px black; 
-}
-.leftPlay,
-.rightPlay {
-    display: flex;
-    justify-content: center;
-    width: 155px;
-    height: 101px;
-    color: $textColor;
-    font-family: 'K2D', cursive;
-    font-size: 66px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px black;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    .leftPlay,
+    .rightPlay {
+        display: flex;
+        justify-content: center;
+        width: 155px;
+        height: 101px;
+        color: $textColor;
+        font-family: 'K2D', cursive;
+        font-size: 66px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px black;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 .midLeftBox,
 .midRightBox {
@@ -108,9 +108,8 @@ body {
         height: 484px;
         padding: 8px 0 12px 0;
         background: $bgGreen;
-        border: 2px solid $darkBorder;
+        border: 2px solid $greenBorder;
         border-radius: 10px;
-        //box-shadow: 0 0 3px 2px black;
     }
     .selectorsTitle {
         box-sizing: border-box;
@@ -127,10 +126,9 @@ body {
         text-align: center;
         text-transform: uppercase;
         text-shadow: 1px 1px 2px black;
-        background: $titleBg;
-        border: 2px solid $lightBorder;
-        border-radius: 6px;
-        //box-shadow: 0 0 3px 2px black;      
+        background: $bgBlue;
+        border: 2px solid $greenBorder;
+        border-radius: 6px;   
     }
     .selector {
         display: flex;
@@ -144,7 +142,6 @@ body {
         box-shadow: 0 0 4px 2px black;
     
         img {
-            //width: 100%;
             height: 100%;
         }
     
@@ -167,10 +164,9 @@ body {
     height: 70px;
     width: 160px;
     margin: 24px auto;
-    background: $bgGreen;
-    border: 2px solid $darkBorder;
+    background: $bgBlue;
+    border: 2px solid $greenBorder;
     border-radius: 10px;
-    //box-shadow: 0 0 3px 2px black;
 
     .developer {
         margin-top: -10px;
@@ -180,7 +176,7 @@ body {
         font-size: 50px;
         font-weight: 600;
         text-align: center;
-        text-shadow: 1px 1px 2px palegoldenrod; 
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 0 2px rgba(255, 255, 255, .4), 0 0 3px rgba(255, 255, 255, 0.2);
     }
     .games {
         margin-left: 4px;
@@ -189,7 +185,7 @@ body {
         font-size: 22px;
         font-weight: 800;
         letter-spacing: 2px;
-        text-shadow: 1px 1px 2px palegoldenrod;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 0 2px rgba(255, 255, 255, .4), 0 0 3px rgba(255, 255, 255, .2); 
     }
 }
 
@@ -268,6 +264,7 @@ body {
     .playerName {
         width: 318px;
         padding: 4px 10px 12px 0;
+        color: rgb(240, 237, 219);
     
         .inputName {
             padding: 6px 8px 0 0;
@@ -325,10 +322,6 @@ body {
         font-weight: 800;
         text-align: center;
         letter-spacing: 2px;
-        //background: rgba(52, 0, 0, 0.2);
-        //border: 2px solid rgba(94, 124, 50, 0.2);
-        //border-radius: 8px;
-        //box-shadow: inset 0 0 2px 1px black;
     }
     .scoreTextBox {
         display: flex;
@@ -384,8 +377,6 @@ body {
     margin: 12px auto 8px auto;
     background: $bgBlue;
     border: 2px solid $darkBorder;
-    //border-top: 3px solid rgb(37, 86, 116);
-    //border-bottom: 3px solid rgb(37, 86, 116);
     border-radius: 2px;
     box-shadow: inset 0 0 2px 1px rgb(26, 26, 26);
 }
@@ -402,8 +393,9 @@ body {
     text-shadow: 2px 2px 3px black;
 
     span {
-        color: #7c5d06;
-        font-size: 26px;
+        color: #96700a;
+        font-size: 23px;
+        letter-spacing: 2px;
         text-transform: uppercase;
     }
     
@@ -413,9 +405,6 @@ body {
     justify-content: space-evenly;
     margin: 24px auto 24px auto;
     height: 72px;
-    //background-color: $bgBlue;
-    //border: 2px solid $darkBorder;
-    //box-shadow: 0 0 3px 2px black;
 
     .gameButtons {
         height: 48px;
@@ -442,7 +431,7 @@ body {
 
         &:hover {
             transition: 0.2s ease-in-out;
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
     }
     #restartButton {
@@ -450,7 +439,7 @@ body {
 
         &:hover {
             transition: 0.2s ease-in-out;
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
     }
 }
@@ -505,6 +494,5 @@ body {
     font-weight: 200;
     text-align: center;
     letter-spacing: 1px;
-    //text-shadow: 1px 1px 2px rgba(5, 51, 77, 0.8), -1px -1px 2px rgba(5, 51, 77, 0.8);
     transform: scaleY(1.3);
 }

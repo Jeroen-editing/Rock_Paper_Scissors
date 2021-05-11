@@ -34,10 +34,15 @@ function startGame() {
     let nameInput = document.getElementById("playerInput").value;
     let playerName = document.getElementById('playerName');
     playerName.innerHTML = '';
-    playerName.textContent = nameInput;
-    playerName.style.textTransform = 'capitalize';
+
+    if (nameInput == "") {
+        playerName.textContent = "You";
+        playerName.style.width = '70px';
+    } else {
+        playerName.textContent = nameInput;
+    }
     gameTextTwo.innerHTML = '<span>☚</span> ← ← <span>☚</span> ← ← <span>☚</span> ' +
-                                'or <span>☛</span> → → <span>☛</span> → → <span>☛</span>';
+                                '&nbsp;&nbsp;or&nbsp;&nbsp; <span>☛</span> → → <span>☛</span> → → <span>☛</span>';
     gameTextTwo.style.marginTop = "-10px";
 
     let playerNumber = 0;
@@ -152,7 +157,11 @@ function startGame() {
                 gameTextOne.innerHTML = "<span>Too bad</span>, Your Pc won this game.";
                 gameTextOne.style.color = '#CF1B0A'; }
             else {
-                gameTextOne.innerHTML = "<span>Congratulations</span>, you won this game!";
+                if (nameInput == "you") {
+                    gameTextOne.innerHTML = `<span>Congratulations</span>, you won this game!`;
+                } else {
+                    gameTextOne.innerHTML = `<span>Congratulations</span> ${nameInput}, you won this game!`;
+                }
                 gameTextOne.style.color = '#089C36'; }}
         document.getElementById('restartButton').addEventListener('click', newGame); }
 }
