@@ -154,11 +154,11 @@ function startGame() {
             gameTextTwo.textContent = "Press 'New Game' to restart the game.";
             gameTextTwo.style.marginTop = "0";
             if (pcPoints > playerPoints) {
-                gameTextOne.innerHTML = "<span>Too bad</span>, Your Pc won this game.";
+                gameTextOne.innerHTML = "<span>Too bad,</span> your PC won this game.";
                 gameTextOne.style.color = '#CF1B0A'; }
             else {
                 if (nameInput == "you") {
-                    gameTextOne.innerHTML = `<span>Congratulations</span>, you won this game!`;
+                    gameTextOne.innerHTML = `<span>Congratulations,</span> you won this game!`;
                 } else {
                     gameTextOne.innerHTML = `<span>Congratulations</span> ${nameInput}, you won this game!`;
                 }
